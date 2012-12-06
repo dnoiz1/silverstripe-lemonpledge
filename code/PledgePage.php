@@ -72,7 +72,7 @@ class PledgePage_controller extends Page_controller
 			new FormAction('doPledge', $this->ButtonLabel)
 		);
 
-		return new Form($this, 'pledge', $f, $a);
+		return new Form($this, 'doPledge', $f, $a);
 	}
 
 	public function pledge()
