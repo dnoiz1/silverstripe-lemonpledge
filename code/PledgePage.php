@@ -18,7 +18,7 @@ class PledgePage extends Page
 		$f->addFieldsToTab('Root.Content.Main', new FieldSet(
 			new TextField('ButtonLabel', 'Button Label'),
 			new LiteralField('', 'You can use $PledgeButton or $PledgeCount in Content'),
-			new CheckBoxField('HitOrClick', 'Require a button click to Increment?')
+			new CheckBoxField('HitOrClick', 'Increment on View?')
 		));
 		return $f;
 	}
