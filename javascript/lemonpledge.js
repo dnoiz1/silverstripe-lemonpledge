@@ -9,7 +9,7 @@ jQuery(function(){
 				jQuery('.pledge-count').html(count);
 			},
 			complete: function() {
-				setTimeout(updateCount, 2500);
+				setTimeout(updateCount, 10000);
 			}
 		});
 	};
