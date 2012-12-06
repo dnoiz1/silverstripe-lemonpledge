@@ -1,4 +1,5 @@
 jQuery(function(){
+
 	var updateCount = function()
 	{
 		jQuery.ajax({
@@ -8,7 +9,7 @@ jQuery(function(){
 				jQuery('.pledge-count').html(count);
 			},
 			complete: function() {
-				setTimeout(updateCount, 1000);
+				setTimeout(updateCount, 2500);
 			}
 		});
 	};
