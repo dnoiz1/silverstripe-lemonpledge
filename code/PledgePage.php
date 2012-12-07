@@ -81,7 +81,8 @@ class PledgePage_controller extends Page_controller
 		$ua = $_SERVER['HTTP_USER_AGENT'];
 		$hash = md5($ip . $ua);
 
-		$do = Pledge::get_one('Pledge', sprintf("UserHash = '%s' AND Created BETWEEN DATETIME('now', '-30 seconds') AND DATETIME('now')", $hash));
+		$now = date('Y-m-d H:i:s', time() - 30);
+		$do = Pledge::get_one('Pledge', sprintf("UserHash = '%s' AND Created > '%s'", $hash, $now));
 
 		if($do) {
 			return false;
